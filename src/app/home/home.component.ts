@@ -3,7 +3,6 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
 import { HousingLocation } from '../housinglocation';
 import { NgFor } from '@angular/common';
 import { HousingService } from '../housing.service';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -34,7 +33,7 @@ export class HomeComponent {
       this.filteredLocationList = this.housingLocationList;
       return;
     }
-
+    
     this.filteredLocationList = this.housingLocationList.filter((housingLocation) => 
       housingLocation?.city.toLowerCase().includes(text.toLowerCase()),
     );
